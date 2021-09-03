@@ -1,4 +1,4 @@
-window.omload = ()=>{
+window.onload = ()=>{
     document.addEventListener("DOMContentLoaded", function() {
         var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
       
