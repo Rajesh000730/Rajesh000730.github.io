@@ -9,41 +9,15 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
-<script>
-    window.onload = function() {
-    
-        var images = document.getElementsByTagName('img'),
-            totalImages = images.length,
-            imagesLoaded = 0,
-            img;
-    
-    
-        function checkForLoaded() {
-    
-            if(imagesLoaded === totalImages) {
-                var loadingDiv = document.getElementById('loadingDiv');
-                loadingDiv.parentNode.removeChild(loadingDiv);
-            }
-        }
-    
-    
-        for (var i = 0; i < totalImages; i++) {
-            img = new Image();
-    
-            img.onload = function () {
-    
-                imagesLoaded++;
-                checkForLoaded();
-            }
-    
-            img.src = images[i].src;
-    
-        }
-    }
-    
-    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <body>
-    <div id="container" class="lazy-background">
+    <div class="loader">
+        <h1 >wait loading...</h1>
+    </div>
+    
+    <div class="container">
         <div id="image" class="lazy-background">
             <img src="rajesh.JPG" alt="">
         </div>
@@ -58,6 +32,18 @@
           <a href="mailto:rajeshnit706@gmail.com"><i class="fas fa-lg fa-envelope"></i></a>
         </div>
     </div>
+    <script>
+        let pageLoaded = false
+        window.onload = ()=>{
+            pageLoaded = true
+        }
+        setInterval(()=>{
+            if(pageLoaded){
+                var loader = $('.loader')
+                loader.fadeOut(500)
+            }
+        },2000)
+    </script>
 </body>
 
 </html>

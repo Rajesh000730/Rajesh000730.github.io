@@ -15,13 +15,17 @@ img{
     height: 350px;
     border-radius: 150px;
 }  
-#container{
+.loader{
+    width: 100%;
+    height: 100%;
+}
+.container{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+    background-image: url('../bcgimage.jpg');
 }
 #image{
     width: 300px;
