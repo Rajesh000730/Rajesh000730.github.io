@@ -9,7 +9,39 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
-
+<script>
+    window.onload = function() {
+    
+        var images = document.getElementsByTagName('img'),
+            totalImages = images.length,
+            imagesLoaded = 0,
+            img;
+    
+    
+        function checkForLoaded() {
+    
+            if(imagesLoaded === totalImages) {
+                var loadingDiv = document.getElementById('loadingDiv');
+                loadingDiv.parentNode.removeChild(loadingDiv);
+            }
+        }
+    
+    
+        for (var i = 0; i < totalImages; i++) {
+            img = new Image();
+    
+            img.onload = function () {
+    
+                imagesLoaded++;
+                checkForLoaded();
+            }
+    
+            img.src = images[i].src;
+    
+        }
+    }
+    
+    </script>
 <body>
     <div id="container" class="lazy-background">
         <div id="image" class="lazy-background">
