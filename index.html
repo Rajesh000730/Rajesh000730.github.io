@@ -13,16 +13,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <body>
-    <div class="loader">
-        <h1 >wait loading...</h1>
+    <div id="load" class="loader">
+            <div id="box"></div>
     </div>
+        
     
     <div class="container">
         <div id="image" class="lazy-background">
             <img src="rajesh.JPG" alt="">
         </div>
-        <p class="description">Hi Iam Rajesh. Iam a passinonate programmer intending </p>
-        <p class="description">to become full stack developer</p>
+        <p class="description">Hi Iam Rajesh. Iam a passionate programmer  </p>
+        <p class="description">intending to become a full stack developer</p>
         <br>
         <p class="description">Iam currently pursuing B.Tech in Nit Trichy </p>
         <div id="links">
@@ -33,13 +34,17 @@
         </div>
     </div>
     <script>
-        let pageLoaded = false
+        let pageLoaded = false;
+       
+        
+        
         window.onload = ()=>{
             pageLoaded = true
+         
         }
         setInterval(()=>{
             if(pageLoaded){
-                var loader = $('.loader')
+                var loader = $('#load')
                 loader.fadeOut(500)
             }
         },2000)
