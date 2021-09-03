@@ -21,7 +21,7 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('/bcgimage.jpg');
+    background-color: black;
 }
 #image{
     width: 300px;
