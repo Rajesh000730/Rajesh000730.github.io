@@ -1,3 +1,3 @@
 window.onload = ()=>{
-    document.getElementById('container').fadeIn(100)
+    document.getElementById('container').fadeIn(1000)
 }
