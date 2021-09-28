@@ -36,15 +36,17 @@ img{
     width: 70px;
     height: 70px;
     border: 10px solid black;
-    border-radius: 5px;
-    animation: move 3s infinite linear;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    
+    animation: move 1s linear infinite;
 }
 @keyframes move{
-    from {
+    0% {
         transform: rotate(0deg);
       }
-      to {
-        transform: rotate(359deg);
+    100%{
+        transform: rotate(360deg);
       }
 }
 .container{
@@ -56,6 +58,20 @@ img{
     align-items: center;
     justify-content: space-evenly;
     background-image: url('../bcgimage.jpg');
+}
+
+.p--elements{
+    width: 45%;
+    height: 160px;
+   
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    line-height: 30px;
+    box-sizing: border-box;
+
 }
 #image{
     width: 300px;
@@ -87,7 +103,9 @@ img{
 }
 @media (max-width:500px){
      
-    
+    .p--elements{
+        width: 100%;
+    }
     .description{
       font-size: 1.2em;
     }
@@ -118,6 +136,9 @@ img{
         height: 410px;
         margin-top: 10px;
     }
+     .p--elements{
+        width: 100%;
+    }
   }
 
   @media (max-width:800px){
@@ -130,6 +151,18 @@ img{
         width: 100%;
         height: 100px;
         
+    }
+     .p--elements{
+        width: 100%;
+    }
+    
+  }
+  @media (max-width:1415px){
+     
+    
+
+     .p--elements{
+        width: 100%;
     }
     
   }
