@@ -14,11 +14,7 @@ html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
-img{
-    width: 250px;
-    height: 350px;
-    border-radius: 150px;
-}  
+
 .loader{
     position: absolute;
     width: 100%;
@@ -74,9 +70,14 @@ img{
 
 }
 #image{
-    width: 300px;
-    height: 410px;
+    width: 400px;
+    height: 450px;
     margin-top: 10px;
+    border-radius: 50%;
+    background-image: url('../rajesh.JPG');
+    background-position: top;
+    
+
 }
 .description{
     font-size: 2em;
