@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ 
+ <link href="https://fonts.googleapis.com/css2?family=Jura:wght@600&family=Press+Start+2P&family=Roboto+Slab&family=Saira:wght@500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <style>
+     body{
+        font-family: 'Jura', sans-serif;
+     }
+
+     #container{
+         position: relative;
+         width: 100vw;
+         display: flex;
+         flex-direction: column;
+     }
+     nav{
+         width: 100%;
+         height: auto;
+         position: fixed;
+         display: flex;
+         align-items: center;
+         justify-content: flex-end;
+         padding: 10px 20px;
+         box-sizing: border-box;
+         
+
+     }
+     #navbar--innercontainer{
+         display: flex;
+         align-items: center;
+         margin: 0;
+
+     }
+     li{
+         list-style-type: none;
+         margin-right: 30px;
+     }
+     li a{
+         text-decoration: none;
+         color: black;
+         position: relative;
+     }
+
+     li a:after{
+         content: '';
+         position: absolute;
+         width: 100%;
+         transform: scaleX(0);
+         height: 1.5px;
+          bottom: -2px;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+     li a:hover:after{
+        transform: scaleX(1);
+         transform-origin: bottom left;
+     }
+     #profile{
+         
+         display: flex;
+         
+     }
+     #profile div{
+          display: flex;
+          flex: 0.5;
+          border: 1px solid gainsboro;
+          height: 500px;
+          margin: 10px;
+          align-items: center;
+          justify-content: center;
+     }
+
+     #skills{
+        position: relative;
+        top: 0;
+         display: flex;
+         
+     }
+     #skills div{
+          display: flex;
+          flex: 0.5;
+          border: 1px solid gainsboro;
+          height: 500px;
+          margin: 10px;
+     }
+
+     #profileImage{
+        height: 400px;
+     }
+    
+ </style>
+<body>
+    <div id="load" class="loader">
+            <div id="box"></div>
+    </div>
+        
+    <nav id="navbar">
+        <div id="navbar--innercontainer">
+             <li><a href="/">Academics</a></li>
+             <li><a href="/">Skills</a></li>
+             <li><a href="/">Projects</a></li>
+             <li><a href="/">Contact</a></li>
+        </div>
+     </nav>
+    <div class="container">
+        <div>
+            <img id="profileImage" src="./rajesh.JPG" alt="" >
+        </div>
+        <div id="profile">
+           <div>
+               
+           </div>
+           <div>
+
+        </div>
+        </div>
+
+        <div id="skills">
+            <div>
+ 
+            </div>
+            <div>
+ 
+         </div>
+         </div>
+    </div>
+    <script>
+        let pageLoaded = false;
+       
+        
+        
+        window.onload = ()=>{
+            pageLoaded = true
+         
+        }
+        setInterval(()=>{
+            if(pageLoaded){
+                var loader = $('#load')
+                loader.fadeOut(500)
+            }
+        },2000)
+    </script>
+</body>
+
+</html>
