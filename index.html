@@ -7,48 +7,103 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ 
+ <link href="https://fonts.googleapis.com/css2?family=Jura:wght@600&family=Press+Start+2P&family=Roboto+Slab&family=Saira:wght@500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <style>
+     body{
+        font-family: 'Jura', sans-serif;
+     }
 
-<body>
-    <div id="load" class="loader">
-            <div id="box"></div>
-    </div>
-        
-    
-    <div class="container">
-        <div id="image" class="lazy-background">
-            <img src="rajesh.JPG" alt="">
-        </div>
-        <p class="description">Hi Iam Rajesh. Iam a passionate programmer  </p>
-        <p class="description">intending to become a full stack developer</p>
-        <br>
-        <p class="description">Iam currently pursuing B.Tech in Nit Trichy </p>
-        <div id="links">
-            <a href="Resume.pdf"><i class="fas fa-lg fa-file-pdf"></i></a>
-            <a href="https://www.linkedin.com/in/subasharavindan/"><i class="fab fa-lg fa-linkedin"></i></a>
-          <a href="https://github.com/Rajesh000730"><i class="fab fa-github-square"></i></a>
-          <a href="mailto:rajeshnit706@gmail.com"><i class="fas fa-lg fa-envelope"></i></a>
-        </div>
-    </div>
-    <script>
-        let pageLoaded = false;
-       
-        
-        
-        window.onload = ()=>{
-            pageLoaded = true
+     #container{
+         position: relative;
+         width: 100vw;
+         display: flex;
+         flex-direction: column;
+     }
+     nav{
+         width: 100%;
+         height: auto;
+         position: fixed;
+         display: flex;
+         align-items: center;
+         justify-content: flex-end;
+         padding: 10px 20px;
+         box-sizing: border-box;
          
-        }
-        setInterval(()=>{
-            if(pageLoaded){
-                var loader = $('#load')
-                loader.fadeOut(500)
-            }
-        },2000)
-    </script>
+
+     }
+     #navbar--innercontainer{
+         display: flex;
+         align-items: center;
+         margin: 0;
+
+     }
+     li{
+         list-style-type: none;
+         margin-right: 30px;
+     }
+     li a{
+         text-decoration: none;
+         color: black;
+         position: relative;
+     }
+
+     li a:after{
+         content: '';
+         position: absolute;
+         width: 100%;
+         transform: scaleX(0);
+         height: 1.5px;
+          bottom: -2px;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+     li a:hover:after{
+        transform: scaleX(1);
+         transform-origin: bottom left;
+     }
+     #profile{
+         
+         display: flex;
+         
+     }
+     #profile div{
+          display: flex;
+          flex: 0.5;
+          border: 1px solid gainsboro;
+          height: 500px;
+          margin: 10px;
+          align-items: center;
+          justify-content: center;
+     }
+
+     #skills{
+        position: relative;
+        top: 0;
+         display: flex;
+         
+     }
+     #skills div{
+          display: flex;
+          flex: 0.5;
+          border: 1px solid gainsboro;
+          height: 500px;
+          margin: 10px;
+     }
+
+     #profileImage{
+        height: 400px;
+     }
+    
+ </style>
+<body>
+    <h1>Site under construction...</h1>
+    <h3>Wait for some time</h3>
 </body>
 
 </html>
