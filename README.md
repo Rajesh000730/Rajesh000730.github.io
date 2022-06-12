@@ -5,7 +5,7 @@
  
   - Contact me anytime!!!.
   
-  -You can copy the link here.
+  - You can copy the link here.
   ```
   https://Rajesh000730.github.io
   ```
