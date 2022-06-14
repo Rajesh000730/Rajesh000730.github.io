@@ -15,23 +15,44 @@
  <style>
      body{
         font-family: 'Jura', sans-serif;
+        background-color: #ffffff;
+        margin: 0;
+        
+        width: 100vw;
+         height: 100vh;
+        
+         background-repeat: no-repeat;
+         background-size: cover;
+         
+         
+
      }
 
      #container{
          position: relative;
-         width: 100vw;
-         display: flex;
-         flex-direction: column;
+         
+         width: 100%;
+         height: 100%;
+         overflow-y: scroll;
+         background-color: #002233;
+         position: fixed;
+         overflow-y: scroll;
+         
      }
      nav{
          width: 100%;
          height: auto;
          position: fixed;
+         top: 0;
          display: flex;
          align-items: center;
          justify-content: flex-end;
-         padding: 10px 20px;
+         padding: 20px 10px;
          box-sizing: border-box;
+         background-image: linear-gradient(270deg, #7950f2 5%, #748ffc 95%);         z-index: 10;
+         color: #ffffff;
+         margin: 0;
+         transition: top 0.3s;
          
 
      }
@@ -47,7 +68,7 @@
      }
      li a{
          text-decoration: none;
-         color: black;
+         color: #ffffff;
          position: relative;
      }
 
@@ -59,7 +80,7 @@
          height: 1.5px;
           bottom: -2px;
   left: 0;
-  background-color: #0087ca;
+  background-color: #ffffff;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -99,7 +120,31 @@
      #profileImage{
         height: 400px;
      }
-    
+     
+     #section1{
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box
+     }
+
+     @media screen and (min-width:809px) {
+        #image--container{
+            display: flex;
+            flex: 0.5;
+            justify-content: flex-end;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+        #info{
+            flex:0.5;
+            position: relative;
+            top: -100px;
+        }
+     }
  </style>
 <body>
     <div id="load" class="loader">
@@ -114,27 +159,14 @@
              <li><a href="/">Contact</a></li>
         </div>
      </nav>
-    <div class="container">
-        <div>
-            <img id="profileImage" src="./rajesh.JPG" alt="" >
-        </div>
-        <div id="profile">
-           <div>
-               
-           </div>
-           <div>
+    
+    <div id="container">
+       
 
-        </div>
-        </div>
+            
 
-        <div id="skills">
-            <div>
- 
-            </div>
-            <div>
- 
-         </div>
-         </div>
+       
+           
     </div>
     <script>
         let pageLoaded = false;
@@ -151,6 +183,17 @@
                 loader.fadeOut(500)
             }
         },2000)
+
+        var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-70px";
+  }
+  prevScrollpos = currentScrollPos;
+}
     </script>
 </body>
 
