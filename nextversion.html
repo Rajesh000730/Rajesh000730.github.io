@@ -9,34 +9,34 @@
     <title>My Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@600&family=Press+Start+2P&family=Roboto+Slab&family=Saira:wght@500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
  <style>
      body{
         font-family: 'Jura', sans-serif;
-        background-color: #ffffff;
+        background-color: #002233;
         margin: 0;
-        
+        color: #ffffff;
         width: 100vw;
          height: 100vh;
-        
-         background-repeat: no-repeat;
-         background-size: cover;
-         
+         box-sizing: border-box;
+         overflow-x: hidden;
          
 
      }
 
      #container{
          position: relative;
-         top: 60px;
+         top: 50px;
          width: 100%;
-         height: 100%;
+         
          overflow-y: scroll;
          background-color: #002233;
-         position: fixed;
-         overflow-y: scroll;
+         box-sizing: border-box;
+         
+         
          
      }
      nav{
@@ -46,15 +46,19 @@
          top: 0;
          display: flex;
          align-items: center;
-         justify-content: flex-end;
-         padding: 20px 10px;
+         justify-content: space-between;
+         padding: 15px 10px;
          box-sizing: border-box;
-         background-image: linear-gradient(270deg, #7950f2 5%, #748ffc 95%);         z-index: 10;
-         color: #ffffff;
+         background-color: #14213d;
+               color: #ffffff;
          margin: 0;
          transition: top 0.3s;
+         z-index: 10;
          
 
+     }
+     nav > h1{
+        margin: 0;
      }
      #navbar--innercontainer{
          display: flex;
@@ -80,7 +84,7 @@
          height: 1.5px;
           bottom: -2px;
   left: 0;
-  background-color: #ffffff;
+  background-color: #ff006e;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -88,47 +92,16 @@
         transform: scaleX(1);
          transform-origin: bottom left;
      }
-     #profile{
-         
-         display: flex;
-         
-     }
-     #profile div{
-          display: flex;
-          flex: 0.5;
-          border: 1px solid gainsboro;
-          height: 500px;
-          margin: 10px;
-          align-items: center;
-          justify-content: center;
-     }
-
-     #skills{
-        position: relative;
-        top: 0;
-         display: flex;
-         
-     }
-     #skills div{
-          display: flex;
-          flex: 0.5;
-          border: 1px solid gainsboro;
-          height: 500px;
-          margin: 10px;
-     }
-
-     #profileImage{
-        height: 400px;
-     }
+    
      
-     #section1{
+     #intro{
+        width: 100%;
+        height: calc(100vh - 68.8px);
         display: flex;
         align-items: center;
-        padding: 5px 10px;
-        flex-wrap: wrap;
         justify-content: center;
-        width: 100%;
-        box-sizing: border-box
+        line-height: 5rem;
+        position: relative;
      }
      footer{
         width: 100%;
@@ -136,6 +109,9 @@
         padding: 20px 10px;
         box-sizing: border-box;
         background-color: #ffffff;
+     }
+     #intro img{
+        border-radius: 10px;
      }
 
      @media screen and (min-width:809px) {
@@ -146,11 +122,42 @@
             padding-right: 20px;
             box-sizing: border-box;
         }
-        #info{
-            flex:0.5;
-            position: relative;
-            top: -100px;
+       
+
+        #intro div{
+            padding: 10px 20px;
+            
+            box-sizing: border-box;
+            margin-left: 50px;
         }
+        #skills{
+            display: flex;
+            width: 100%;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+        .align-center{
+            display: flex;
+            align-items: center;
+        }
+        .mr-20{
+            margin-right: 20px;
+        }
+        
+        .d-flex{
+            display: flex;
+        }
+        .flex-half{
+           flex: 0.5;
+        }
+        .p-20-10{
+            padding: 10px 7px;
+        }
+        .border-1{
+          border: 2px solid #ff006e;
+          box-sizing: border-box;
+        }
+        
      }
  </style>
 <body>
@@ -159,9 +166,12 @@
     </div>
         
     <nav id="navbar">
+        <div class="p-20-10 border-1">
+            <h1 style="margin: 0;">MY PORTFOLIO</h1>
+        </div>
         <div id="navbar--innercontainer">
              <li><a href="/">Academics</a></li>
-             <li><a href="/">Skills</a></li>
+             <li><a href="#skills">Skills</a></li>
              <li><a href="/">Projects</a></li>
              <li><a href="/">Contact</a></li>
         </div>
@@ -169,33 +179,56 @@
     
     <div id="container">
        
+      <div id="intro">
+          
+          <img data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" src="./rajesh.JPG" alt="">
+         <div   id="info">
+            <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" style="margin: 0;"><span style="font-size:2.5rem">HELLO IAM </span> <span style="color: #ff006e; font-size: 4rem;">  RAJESH</span> </p>
+            <p data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100" style="font-size: 2.5rem; margin: 0;">IAM A <span style="color: #ff006e; font-size: 4rem;">FULLSTACK</span> DEVELOPER</p>
+            <p data-aos="fade-left" data-aos-duration="2000" data-aos-delay="100" style="font-size: 2.5rem; margin: 0;">IAM STUDYING IN <span style="color: #ff006e; font-size: 4rem">NIT TRICHY</span></p>
+         </div>
+      </div>
+      
+      <hr>
 
+      <div id="skills">
+       <div   id="skills--container" class="d-flex flex-half">
+          <div id="html" class="align-center mr-20">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/180px-HTML5_logo_and_wordmark.svg.png" width="40" alt="">
+            <p style="font-size: 2rem; margin: 0;">HTML </p>
+          </div>
+
+          <div id="css" class="align-center mr-20">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/180px-CSS3_logo_and_wordmark.svg.png" width="40" alt="">
+            <p style="font-size: 2rem; margin: 0; margin-left: 10px;"> CSS </p>
+          </div>
+
+          <div id="javascript" class="align-center">
+            <img style="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/900px-JavaScript-logo.png?20120221235433" width="40" alt="">
+            <p style="font-size: 2rem; margin: 0;margin-left: 10px;"> JAVASCRIPT </p>
+          </div>
+       </div>
+       <div class="d-flex flex-half">
+        <img data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50" src="./pexels-vojtech-okenka-392018-min.jpg" width="600" alt="">
+
+       </div>
+    </div>
+       
+    <hr>
+      
+    </div>
+
+      
             
 
        
-            <div id="profile">
-            <div>
-                
-            </div>
-            <div>
+           
 
-            </div>
-            </div>
-
-            <div id="skills">
-                <div>
-    
-                </div>
-                <div>
-    
-            </div>
-            </div>
-
-            <footer>
-
-            </footer>
+            
     </div>
     <script>
+
+        AOS.init();
         let pageLoaded = false;
        
         
