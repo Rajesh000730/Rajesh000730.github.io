@@ -4,36 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+  />
     <link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
     <title>My Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@600&family=Press+Start+2P&family=Roboto+Slab&family=Saira:wght@500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
  <style>
      body{
         font-family: 'Jura', sans-serif;
-     }
+        background-color: #002233;
+        margin: 0;
+        color: #ffffff;
+        width: 100vw;
+         height: 100vh;
+         box-sizing: border-box;
+         overflow-x: hidden;
+         
 
+     }
+    
      #container{
          position: relative;
-         width: 100vw;
-         display: flex;
-         flex-direction: column;
+         top: 50px;
+         width: 100%;
+         
+         overflow-y: scroll;
+         background-color: #002233;
+         box-sizing: border-box;
+         
+         
+         
      }
      nav{
          width: 100%;
          height: auto;
          position: fixed;
+         top: 0;
          display: flex;
          align-items: center;
-         justify-content: flex-end;
-         padding: 10px 20px;
+         justify-content: space-between;
+         padding: 0px 10px;
          box-sizing: border-box;
+         background-color: #14213d;
+               color: #ffffff;
+         margin: 0;
+         transition: top 0.3s;
+         z-index: 10;
          
 
+     }
+     nav > h1{
+        margin: 0;
      }
      #navbar--innercontainer{
          display: flex;
@@ -47,7 +75,7 @@
      }
      li a{
          text-decoration: none;
-         color: black;
+         color: #ffffff;
          position: relative;
      }
 
@@ -59,7 +87,7 @@
          height: 1.5px;
           bottom: -2px;
   left: 0;
-  background-color: #0087ca;
+  background-color: #ff006e;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -67,43 +95,219 @@
         transform: scaleX(1);
          transform-origin: bottom left;
      }
-     #profile{
-         
-         display: flex;
-         
-     }
-     #profile div{
-          display: flex;
-          flex: 0.5;
-          border: 1px solid gainsboro;
-          height: 500px;
-          margin: 10px;
-          align-items: center;
-          justify-content: center;
-     }
-
-     #skills{
-        position: relative;
-        top: 0;
-         display: flex;
-         
-     }
-     #skills div{
-          display: flex;
-          flex: 0.5;
-          border: 1px solid gainsboro;
-          height: 500px;
-          margin: 10px;
-     }
-
-     #profileImage{
-        height: 400px;
-     }
     
+     
+     #intro{
+        width: 100%;
+        height: calc(100vh - 68.8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 5rem;
+        position: relative;
+     }
+     footer{
+        width: 100%;
+        height: 400px;
+        padding: 20px 10px;
+        box-sizing: border-box;
+        background-color: #ffffff;
+     }
+     #intro img{
+        border-radius: 10px;
+     }
+
+     @media screen and (min-width:768px) {
+         
+        #hamburger{
+        display: none;
+     }
+
+     
+     }
+     @media screen and (max-width:768px) {
+        #navbar--innercontainer li{
+                 display: none;
+            }
+        }
+        @media screen and (max-width:576px) {
+            
+            #intro{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                line-height: 2rem;
+                position: relative;
+               
+                
+            }
+            
+            #intro img{
+                width: 300px;
+                
+            }
+            #img--container{
+                margin: 0;
+                padding: 0;
+            }
+
+            #navbar--innercontainer li{
+                 display: none;
+            }
+
+            #info{
+                font-size: 1.5rem;
+            }
+        }
+
+     
+        #skills{
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+        .align-center{
+            display: flex;
+            align-items: center;
+        }
+        .mr-20{
+            margin-right: 20px;
+        }
+        
+        .d-flex{
+            display: flex;
+        }
+        .flex-half{
+           flex: 0.5;
+        }
+        .p-20-10{
+            padding: 10px 7px;
+        }
+        .border-1{
+          border: 2px solid #ff006e;
+          box-sizing: border-box;
+        }
+        #scrollbar{
+         
+          background-color: #ff006e;
+          position: fixed;
+          top: 76.4px;
+          right: 0;
+          width: 100%;
+           
+          z-index: 11;
+          display: none;
+
+        }
+        #scrollbar li{
+            margin: 20px;
+            font-size: 1.3rem;
+        }
+
+        
+        button{
+            background: none; border:none; color:#ffffff;
+            padding: 0;
+            /* margin: 0; */
+            box-sizing: border-box;
+            margin: 10px;
+        }
+        
  </style>
 <body>
-    <h1>Site under construction...</h1>
-    <h3>Wait for some time</h3>
+    <div id="scrollbar">
+        <li><a href="/">Academics</a></li>
+             <li><a href="#skills">Skills</a></li>
+             <li><a href="/">Projects</a></li>
+             <li><a href="/">Contact</a></li>
+   </div>
+    <div id="load" class="loader">
+            <div id="box"></div>
+    </div>
+        
+    <nav id="navbar">
+        <div class="p-20-10 border-1">
+            <h1 style="margin: 0;">MY PORTFOLIO</h1>
+        </div>
+        <div id="navbar--innercontainer">
+             <li><a href="/">Academics</a></li>
+             <li><a href="#skills">Skills</a></li>
+             <li><a href="/">Projects</a></li>
+             <li><a href="/">Contact</a></li>
+             <div id="hamburger">
+               <button class="toggle1" ><h1> <i class="fa-solid fa-bars"></i></h1></button>
+             </div>
+        </div>
+     </nav>
+    
+    <div id="container">
+       
+      <div id="intro">
+         <div id="img--container">
+            <img data-aos="zoom-out-up"  src="./rajesh.JPG" alt="">
+
+         </div> 
+         <div   id="info">
+            <p data-aos="zoom-out-up"  data-aos-delay="100" style="margin: 0;"><span>HELLO IAM </span> <span style="color: #ff006e; ">  RAJESH</span> </p>
+            <p data-aos="zoom-out-up"  data-aos-delay="100" style=" margin: 0;">IAM A <span style="color: #ff006e;">FULLSTACK</span> DEVELOPER</p>
+            <p data-aos="zoom-out-up"  data-aos-delay="100" style=" margin: 0;">IAM STUDYING IN <span style="color: #ff006e; ">NIT TRICHY</span></p>
+         </div>
+      </div>
+      
+      <hr>
+
+      <div id="skills">
+       
+       </div>
+    </div>
+       
+    <hr>
+      
+    </div>
+
+      
+            
+
+       
+           
+
+            
+    </div>
+    <script>
+
+        AOS.init();
+        let pageLoaded = false;
+       
+        
+        
+        window.onload = ()=>{
+            pageLoaded = true
+         
+        }
+        setInterval(()=>{
+            if(pageLoaded){
+                var loader = $('#load')
+                loader.fadeOut(500)
+            }
+        },2000)
+        $(".toggle1").click(function(){
+        $("#scrollbar").slideToggle();
+          });
+        var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+        $("#scrollbar").hide();
+    var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-70px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+    </script>
 </body>
 
 </html>
