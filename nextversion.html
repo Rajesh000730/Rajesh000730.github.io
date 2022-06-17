@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+  />
     <link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
     <title>My Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +29,7 @@
          
 
      }
-
+    
      #container{
          position: relative;
          top: 50px;
@@ -114,25 +117,55 @@
         border-radius: 10px;
      }
 
-     @media screen and (min-width:809px) {
-        #image--container{
-            display: flex;
-            flex: 0.5;
-            justify-content: flex-end;
-            padding-right: 20px;
-            box-sizing: border-box;
-        }
-       
+     @media screen and (min-width:768px) {
+         
+        #hamburger{
+        display: none;
+     }
 
-        #intro div{
-            padding: 10px 20px;
-            
-            box-sizing: border-box;
-            margin-left: 50px;
+     
+     }
+     @media screen and (max-width:768px) {
+        #navbar--innercontainer li{
+                 display: none;
+            }
         }
+        @media screen and (max-width:576px) {
+            
+            #intro{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                line-height: 2rem;
+                position: relative;
+               
+                
+            }
+            
+            #intro img{
+                width: 300px;
+                
+            }
+            #img--container{
+                margin: 0;
+                padding: 0;
+            }
+
+            #navbar--innercontainer li{
+                 display: none;
+            }
+
+            #info{
+                font-size: 1.5rem;
+            }
+        }
+
+     
         #skills{
             display: flex;
             width: 100%;
+            height: 100vh;
             padding: 10px 20px;
             box-sizing: border-box;
         }
@@ -157,8 +190,6 @@
           border: 2px solid #ff006e;
           box-sizing: border-box;
         }
-        
-     }
  </style>
 <body>
     <div id="load" class="loader">
@@ -174,43 +205,30 @@
              <li><a href="#skills">Skills</a></li>
              <li><a href="/">Projects</a></li>
              <li><a href="/">Contact</a></li>
+             <div id="hamburger">
+               <button style="background: none; border:none; color:#ffffff"><h1> <i class="fa-solid fa-bars"></i></h1></button>
+             </div>
         </div>
      </nav>
     
     <div id="container">
        
       <div id="intro">
-          
-          <img data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" src="./rajesh.JPG" alt="">
+         <div id="img--container">
+            <img data-aos="zoom-out-up"  src="./rajesh.JPG" alt="">
+
+         </div> 
          <div   id="info">
-            <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" style="margin: 0;"><span style="font-size:2.5rem">HELLO IAM </span> <span style="color: #ff006e; font-size: 4rem;">  RAJESH</span> </p>
-            <p data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100" style="font-size: 2.5rem; margin: 0;">IAM A <span style="color: #ff006e; font-size: 4rem;">FULLSTACK</span> DEVELOPER</p>
-            <p data-aos="fade-left" data-aos-duration="2000" data-aos-delay="100" style="font-size: 2.5rem; margin: 0;">IAM STUDYING IN <span style="color: #ff006e; font-size: 4rem">NIT TRICHY</span></p>
+            <p data-aos="zoom-out-up"  data-aos-delay="100" style="margin: 0;"><span>HELLO IAM </span> <span style="color: #ff006e; ">  RAJESH</span> </p>
+            <p data-aos="zoom-out-up"  data-aos-delay="100" style=" margin: 0;">IAM A <span style="color: #ff006e;">FULLSTACK</span> DEVELOPER</p>
+            <p data-aos="zoom-out-up"  data-aos-delay="100" style=" margin: 0;">IAM STUDYING IN <span style="color: #ff006e; ">NIT TRICHY</span></p>
          </div>
       </div>
       
       <hr>
 
       <div id="skills">
-       <div   id="skills--container" class="d-flex flex-half">
-          <div id="html" class="align-center mr-20">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/180px-HTML5_logo_and_wordmark.svg.png" width="40" alt="">
-            <p style="font-size: 2rem; margin: 0;">HTML </p>
-          </div>
-
-          <div id="css" class="align-center mr-20">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/180px-CSS3_logo_and_wordmark.svg.png" width="40" alt="">
-            <p style="font-size: 2rem; margin: 0; margin-left: 10px;"> CSS </p>
-          </div>
-
-          <div id="javascript" class="align-center">
-            <img style="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/900px-JavaScript-logo.png?20120221235433" width="40" alt="">
-            <p style="font-size: 2rem; margin: 0;margin-left: 10px;"> JAVASCRIPT </p>
-          </div>
-       </div>
-       <div class="d-flex flex-half">
-        <img data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50" src="./pexels-vojtech-okenka-392018-min.jpg" width="600" alt="">
-
+       
        </div>
     </div>
        
@@ -243,7 +261,9 @@
                 loader.fadeOut(500)
             }
         },2000)
-
+        $("button").click(function(){
+        $("#img--container").toggle();
+          });
         var prevScrollpos = window.pageYOffset;
       window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
